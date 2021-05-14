@@ -72,6 +72,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 h1,
@@ -101,8 +102,8 @@ h4 {
 }
 
 p {
-    margin-bottom: 1.25rem;
     color: var(--clr-grey-5);
+    white-space: pre-wrap;
 }
 
 @media screen and (min-width: 800px) {
@@ -160,4 +161,92 @@ p {
     cursor: pointer;
     margin-top: 2rem;
     font-size: 1.2rem;
+}
+
+img{
+    width: 100%;
+}
+
+/* Page styling */
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+#display-animals{
+    border: 2px solid black;
+    padding: 3rem 1rem;
+    margin: 3rem;
+}
+
+.animal{
+    margin-bottom: 5rem;
+    display: grid;
+    place-items: center;
+}
+
+.data-box{
+    width: 100%;
+    padding: 1rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-section button{
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius);
+    text-transform: capitalize;
+    color: var(--clr-white);
+    letter-spacing: var(--spacing);
+    border-color: transparent;
+    cursor: pointer;
+    margin: 1rem;
+    font-size: 1.3rem;
+}
+
+.btn-section .edit-btn{
+    background-color: var(--clr-green-light);
+}
+
+.btn-section .delete-btn {
+    background-color: var(--clr-red-light);
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--clr-red-dark);
+}
+
+.scientific-name {
+    color: var(--clr-grey-2)
+}
+
+.status {
+    background-color: aqua;
+    width: fit-content;
+    padding: .5rem 1rem;
+    border: 1px transparent white;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.status-2 {
+    background-color: var(--clr-red-dark);
+    width: fit-content;
+    padding: .5rem 1rem;
+    border: 1px transparent white;
+    border-radius: 5px;
+    font-size: 1.5rem;
 }

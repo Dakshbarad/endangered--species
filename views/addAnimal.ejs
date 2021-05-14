@@ -3,16 +3,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edit animal</title>
-    <link rel="stylesheet" href="/css/editAnimal.css">
+    <title>Add animal</title>
+    <link rel="stylesheet" href="/css/addAnimal.css" />
   </head>
   <body>
     <div class="container">
-      <h2 class="heading">Add Animal Data</h2>
+      <h2 class="heading">Add New Animal</h2>
       <form>
         <div class="form-element">
           <label for="name">Name</label>
-          <input type="text" name="name" id="name" value="" />
+          <input type="text" name="name" id="name" />
         </div>
         <div class="form-element">
           <label for="scientific-name">Scientific Name</label>
@@ -25,11 +25,11 @@
         </div>
         <div class="form-element">
           <label for="about">About</label>
-          <input type="text" name="about" id="about" value="" />
+          <input type="text" name="about" id="about" />
         </div>
         <div class="form-element">
           <label for="image">Image URL</label>
-          <input type="text" name="image" id="image" value="" />
+          <input type="text" name="image" id="image" />
         </div>
         <div class="form-element">
           <label for="conservation-status">Conservation Status</label>
@@ -44,20 +44,15 @@
         </div>
         <div class="form-element">
           <label for="number-remaining">Number Remaining</label>
-          <input
-            type="text"
-            name="number-remaining"
-            id="number-remaining"
-            value=""
-          />
+          <input type="text" name="number-remaining" id="number-remaining" />
         </div>
       </form>
-    <div class="btn-section">
+      <div class="btn-section">
         <a href="/animals"><button id="cancel-btn">Cancel</button></a>
         <button id="submit-btn">Submit</button>
       </div>
     </div>
 
-    <script src="/js/editAnimal.js"></script>
+    <script src="/js/addAnimal.js"></script>
   </body>
 </html>

@@ -4,14 +4,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="/public/css/home.css" />
+    <link rel="stylesheet" href="/css/home.css" />
   </head>
   <body>
-    <div class="container">
-      <section class="topview">
-        <h1>Endangered Species</h1>
-        <h3>Currently 16,306 species are threatened with extinction.</h3>
-        <a href="/animals"><button>Show all animals</button></a>
+    <div class="topview">
+      <div class="overlay"></div>
+      <section class="container data-container">
+        <h1 id="main-heading">Endangered Species</h1>
+        <h3 id="sub-heading-1">Currently <span>16,306</span> species are threatened with extinction.</h3>
+        <h3 id="sub-heading-2">Since 1900, more than 477 different species have become extinct because of continued human degradation and destruction of natural habitats.</h3>
+        <h3 id="sub-heading-3">Something needs to change, awareness should be the first step towards this change...</h3>
+        <a href="/animals"><button class="btn">Show all animals</button></a>
       </section>
     </div>
   </body>

@@ -54,7 +54,7 @@ app.get("/api/animals/:id", (req, res) => {
 app.post("/api/animals", (req, res) => {
   //Create a new animal row using the req data
   var animal = req.body;
-  // insert one row into the langs table
+  // insert one row into the species_list table
   db.run(
     `INSERT INTO species_list(Name, Scientific_Name, Number_Remaining, About, Image, Conservation_Status) VALUES(?,?,?,?,?,?)`,
     [
@@ -74,12 +74,13 @@ app.post("/api/animals", (req, res) => {
       res.status(200);
     }
   );
-  res.json(req.body);
+  res.redirect("/animals");
 });
 
 app.put("/api/animals/:id", (req, res, next) => {
   // Update the details of a specific animal using req data
   var animal = req.body;
+  console.log(animal);
   db.run(
     `Update species_list set Name = ?, Scientific_Name = ?, Number_Remaining = ?, About = ?, Image = ?, Conservation_Status = ? where Id = ?`,
     [
@@ -99,8 +100,7 @@ app.put("/api/animals/:id", (req, res, next) => {
       console.log(`A row has been updated with rowid ${this.changes}`);
     }
   );
-  console.log(req.params.id);
-  res.json(req.body);
+  res.redirect("/animals");
 });
 
 app.delete("/api/animals/:id", (req, res) => {
@@ -126,11 +126,16 @@ app.get("/animals", (req, res) => {
 
 app.get("/animals/:id", (req, res) => {
   // Call the api for specific animal and send that data toshowAnimals.ejs
-  res.render("showAnimal", { id: req.params.id });
+  res.render("showAnimal");
 });
 
 app.get("/animals/edit/:id", (req, res) => {
   res.render("editAnimal", { id: req.params.id });
+});
+
+app.get("/addanimal", (req, res) => {
+  console.log("this one");
+  res.render("addAnimal");
 });
 
 // Default route
