@@ -14,10 +14,18 @@ To learn:
 `npm start`
 3. The project will now run on localhost:3000
 
-## What to expect
-
 ## Technologies Used
 1. EJS
 2. Express
 3. Nodemon
 4. Sqlite3
+
+## What to expect
+| Landing Page  | DisplayPage | Edit Page |
+| ------------- | ------------- | ------------- |
+| <img src="./snips/LandingPage.JPG" alt="drawing" width="250"/>  | <img src="./snips/DisplayPage.JPG" alt="drawing" width="250"/>  | <img src="./snips/EditAnimal.JPG" alt="drawing" width="250"/> |
+
+| Add Page  | Database |
+| ------------- | ------------- |
+| <img src="./snips/AddAnimal.JPG" alt="drawing" width="250"/>  | <img src="./snips/SqlDatabase.JPG" alt="drawing" width="250"/>  |
+
