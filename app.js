@@ -13,6 +13,16 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "*");
+  if (req.method === "OPTIONS") {
+    res.header("Access-Control-Allow-Methods", "PUT, POST, PATCH, DLETE");
+    return res.status(200).json({});
+  }
+  next();
+});
+
 var server = http.createServer(app);
 var db = new sqlite.Database("./public/database/species.db");
 
@@ -140,7 +150,7 @@ app.get("/addanimal", (req, res) => {
 
 // Default route
 app.get("*", (req, res) => {
-  res.send("Error Page");
+  res.render("home");
 });
 
 // Port Listener

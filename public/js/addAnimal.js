@@ -23,7 +23,19 @@ async function submitHandler() {
       conservation_status: conservation_status.value,
       number_remaining: number_remaining.value,
     };
-    sendApiData(newData);
+
+    if (
+      name.value &&
+      scientific_name.value &&
+      about.value &&
+      image.value &&
+      conservation_status.value &&
+      number_remaining.value
+    ) {
+      sendApiData(newData);
+    } else {
+      alert("Fill all values.");
+    }
   });
 }
 
